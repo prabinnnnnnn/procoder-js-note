@@ -1,0 +1,50 @@
+*{
+  font-family: 'Gilroy-medium';
+}
+
+.complete .checkBox{
+  background-color: #48a300;
+  border: none;
+} 
+
+.complete .input-text{
+  color: #48a300;
+  text-decoration-line: line-through;
+}
+
+.fa-solid{
+  color: white;
+  font-size: 13px;
+}
+
+.warning-text{
+  visibility: hidden;
+}
+
+.warning .warning-text{
+  visibility: visible;
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+}
+
+
+.sun{
+  animation-name: spin;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.sun:hover{
+  animation-play-state: paused;
+}
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

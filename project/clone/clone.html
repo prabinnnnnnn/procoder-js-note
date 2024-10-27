@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="ing.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="clone.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js" defer ></script>
+  <title>Todo || List</title>
+</head>
+<body class="h-full w-full ">
+  <div class="h-screen w-screen bg-teal-100 flex justify-center items-center flex-col ">
+    <div class="today-container h-[95%] w-[40%] bg-slate-50 rounded-lg p-5 max-lg:h-[100%] max-lg:w-[100%] max-md:h-[100%] max-md:w-[100%] ">
+      <div class="heading-container h-[50px] w-full flex items-center gap-x-4">
+        <p class="day text-[30px] font-bold- font-[Gilroy-Bold]"></p>
+
+        <svg class="sun" width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.0012 15.6258C19.8349 15.6258 15.6258 19.8349 15.6258 25.0012C15.6258 30.1675 19.8349 34.3767 25.0012 34.3767C30.1675 34.3767 34.3767 30.1675 34.3767 25.0012C34.3767 19.8349 30.1675 15.6258 25.0012 15.6258ZM49.0649 23.4875L39.8164 18.8681L43.088 9.06294C43.5275 7.73475 42.2677 6.47492 40.9493 6.92416L31.1441 10.1958L26.515 0.937546C25.8899 -0.312515 24.1125 -0.312515 23.4875 0.937546L18.8681 10.186L9.05317 6.9144C7.72498 6.47492 6.46516 7.73475 6.9144 9.05317L10.186 18.8583L0.937546 23.4875C-0.312515 24.1125 -0.312515 25.8899 0.937546 26.515L10.186 31.1343L6.9144 40.9493C6.47492 42.2774 7.73475 43.5373 9.05317 43.088L18.8583 39.8164L23.4777 49.0649C24.1027 50.3149 25.8802 50.3149 26.5052 49.0649L31.1246 39.8164L40.9297 43.088C42.2579 43.5275 43.5177 42.2677 43.0685 40.9493L39.7969 31.1441L49.0453 26.5247C50.3149 25.8899 50.3149 24.1125 49.0649 23.4875ZM33.8395 33.8395C28.9662 38.7128 21.0362 38.7128 16.1629 33.8395C11.2896 28.9662 11.2896 21.0362 16.1629 16.1629C21.0362 11.2896 28.9662 11.2896 33.8395 16.1629C38.7128 21.0362 38.7128 28.9662 33.8395 33.8395Z"
+            fill="#FED50D" />
+          <circle cx="20.0389" cy="21.3317" r="0.646416" fill="#61481C" />
+          <path
+            d="M27.7958 27.7959C27.7958 28.4816 27.5234 29.1393 27.0385 29.6242C26.5536 30.1091 25.8959 30.3815 25.2102 30.3815C24.5244 30.3815 23.8667 30.1091 23.3818 29.6242C22.8969 29.1393 22.6245 28.4816 22.6245 27.7959L25.2102 27.7959H27.7958Z"
+            fill="#61481C" />
+          <circle cx="29.7352" cy="21.3317" r="0.646416" fill="#61481C" />
+        </svg>
+
+        <p class="date text-[20px] font-bold- font-[Gilroy-Bold] flex justify-left "></p>
+      </div>
+
+      <p class="quort font-[Gilroy-semibold] opacity-50 mb-2">Raise the bar by completing your goals! </p>
+      <div class="h-[25px] w-full rounded-2xl shadow-sm bg-slate-400 relative overflow-hidden">
+        <p class="task absolute top-[5px] left-3 text-[10px] text-slate-50 font-[Gilroy-semibold]">
+          
+        </p>
+        <div class="progress-bar h-full w-[0%] duration-[0.7s]  rounded-2xl bg-[#48a300]"></div>
+      </div>
+      <p class="warning-text text-red-500 pt-2">Please set all the 3 goals!</p>
+      <div class="h-[60%] w-full overflow-hidden mt-3 mb-2">
+        <div class="container h-full w-full grid grid-cols-1 gap-2 overflow-y-auto">
+
+          <div class="todo-card h-[80%] w-full relative border border-gray-300 rounded-2xl flex items-center px-4 gap-x-4 ">
+            <div class="checkBox h-6 w-6 max-lg:h-8 max-lg:w-8 max-md:h-8 max-md:w-8 rounded-[50%] border-2 border-gray-400 flex justify-center items-center cursor-pointer">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <input type="text" spellcheck="false" placeholder="Add new goals..." class="input-text capitalize outline-none w-[90%] h-full bg-slate-50 max-md:w-[80%] max-md:text-[20px] text-slate-700">
+          </div>
+
+          <div class="h-[80%] w-full relative border border-gray-300 rounded-2xl flex items-center px-4 gap-x-4">
+            <div class="checkBox h-6 w-6 max-lg:h-8 max-lg:w-8 max-md:h-8 max-md:w-8 rounded-[50%] border-2 border-gray-400 flex justify-center items-center cursor-pointer">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <input  type="text" spellcheck="false" placeholder="Add new goals..." class="input-text capitalize outline-none w-[90%] h-full bg-slate-50 max-md:w-[80%] max-md:text-[20px] text-slate-700 ">
+          </div>
+
+          <div class="h-[80%] w-full relative border border-gray-300 rounded-2xl flex items-center px-4 gap-x-4">
+            <div class="checkBox h-6 w-6 max-lg:h-8 max-lg:w-8 max-md:h-8 max-md:w-8 rounded-[50%] border-2 border-gray-400 flex justify-center items-center cursor-pointer">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <input  type="text" spellcheck="false" placeholder="Add new goals..." class="input-text capitalize outline-none w-[90%] h-full bg-slate-50 max-md:w-[80%] max-md:text-[20px] text-slate-700">
+          </div>
+
+          <div class="h-[80%] w-full relative border border-gray-300 rounded-2xl flex items-center px-4 gap-x-4">
+            <div class="checkBox h-6 w-6 max-lg:h-8 max-lg:w-8 max-md:h-8 max-md:w-8 rounded-[50%] border-2 border-gray-400 flex justify-center items-center cursor-pointer">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <input type="text" spellcheck="false" placeholder="Add new goals..." class="input-text capitalize outline-none w-[90%] h-full bg-slate-50 max-md:w-[80%] max-md:text-[20px] text-slate-700">
+          </div>
+
+        </div>
+      </div>
+      <div class="border h-[15%] w-full flex justify-around items-center">
+        <p class="opacity-50 font-bold ">~~Move on step to head~~</p>
+        <div class="add-button h-10 w-10 rounded-full text-white bg-[#48a300] flex justify-center items-center ">
+          <i class="fa-solid fa-plus text-[20px] "></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- /* Vector */
+
+position: absolute;
+left: 38.47%;
+right: 58.06%;
+top: 19.34%;
+bottom: 75.78%;
+
+background: #FED50D; -->
+

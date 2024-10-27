@@ -1,0 +1,19 @@
+/* //IF WE DECLARE A FUNCTION IN A VARIABLE IS CALLED FUNCTION EXPRESSION
+ 
+function arrow() {
+  console.log('hi')
+ }
+
+
+//IF WE DECLARE A FUNCTION IN A VARIABLE IS CALLED FUNCTION EXPRESSION
+// A FUNCTION HAVE RETURN KEYWORD IS CALLED EXPLICIT RETURN
+const arrowFnc = (a, b) => {
+  return a + b
+}
+
+arrowFnc(5, 5)
+
+
+
+
+ */
